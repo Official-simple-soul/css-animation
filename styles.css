@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    opacity: .85;
+}
+header {
+    width: 80%;
+    min-height: 14vh;
+    margin: auto;
+    color: rgb(238, 245, 235);
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 15px;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+ul li {
+    list-style: none;
+    margin-left: 20px;
+    font-size: 18px;
+    border: 1px solid white;
+    padding: 3.5px 25px;
+    position: relative;
+    transition: 2s all ease;
+}
+
+ul li::before{
+    background-color: rgba(257, 257, 257, 0.329);
+    color: white;
+    width: 0%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s all ease;
+    overflow: hidden;
+    z-index: -1;
+}
+
+ul li:hover::before {
+    width: 100%;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.main {
+    text-align: center;
+    margin: auto;
+}
+.main fa {
+    display: none;
+}
+.main h1 {
+    width: 40%;
+    margin: 60px auto;
+    color: rgb(198, 230, 233);
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+.main h4 {
+    color: rgba(245, 245, 245, 0.795);
+    margin-bottom: 46px;
+    font-size: 18px;
+}
+button {
+    width: 20%;
+    height: 80px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    border-color: aliceblue;
+    position: relative;
+    transition: 1s all ease;
+}
+button::before {
+    width: 0%;
+    height: 0;
+    background-color: grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -1;
+    content: "";
+    transition: 2s all ease;
+
+}
+button:hover::before {
+    height: 100%;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+}
+.menu .fa {
+    display: none;
+}
+
+/* .bodymain {
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.parent {
+    background-color: red;
+    height: 400px;
+    width: 400px;
+    margin: auo;
+    transition-property: transform;
+    transition-timing-function: ease-in;
+    transition-duration: 3s;
+}
+
+.child {
+    background-color: whitesmoke;
+    width: 50%;
+    height: 50%;
+}
+.parent:hover {
+    transform: rotate(45deg);
+    background-color: black;
+    
+}
+
+.parent:hover .child {
+    background-color: grey;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+
+.get {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding: 40px;
+}
+.get .menu2 {
+    transform: translate(0%, 25%);
+    transition: 2s;
+}
+.get .menu2 ul {
+    ;
+}
+.get .menu2 ul li {
+    position: relative;
+    color: white;
+    font-size: 25px;
+    text-orientation: none;
+    margin: 0px 10px;
+    border: 2px solid white;
+    padding: 14px 60px;
+    overflow: hidden;
+    transition: 1s all ease;
+    cursor: pointer;
+}
+
+.get .menu2 ul li::before {
+    background-color: grey;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 1s ease;
+    
+}
+.get .menu2 ul li::before {
+    width: 0;
+    height: 100%;
+}
+.get .menu2 ul li:hover::before {
+    width: 100%;
+}
+
+.get .menu2 ul li2::before {
+    width: 0;
+    height: 100%;
+}
+.get .menu2 ul li2:hover::before {
+    width: 100%;
+}
+@keyframes example {
+    0% {
+        transform: translateX(0%);  
+    }
+    33% {
+        transform: translateY(100%);
+    }
+    66% {
+        transform: translateX(100%) translateY(100%);
+    } 
+    100% {
+        transform: translateX(100%);
+    }
+    
+}
+@media (max-width: 700px) {
+    .main h1 {
+        font-size: 30px;
+        width: 80%;
+        margin: auto;
+        margin-top: 35px;
+    }
+    header {
+        width: 100%;
+        min-height: 10vh;
+        padding: 10px 10px;
+        text-align: left;
+    }
+  .menu {
+        background-color: rgba(243, 161, 84);
+        height: 100vh;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        right: -200px;
+        display: block;
+        padding-top: 25px;
+        transition: 1s;
+    }
+    header ul {
+        display: block;
+    }
+    header ul li {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        border: 1px solid white;
+        background-color: rgba(0, 0, 0, 0.719);
+        border-radius: 3px;
+        padding: 5px;
+        width: 60%;
+    }
+    button {
+        width: 20%;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 15px;
+        color: white;
+        background-color: transparent;
+        border-color: aliceblue;
+    }
+    .main h4 {
+        font-size: 14px;
+        margin: 25px 10px;
+    }
+    .menu .fa {
+        display: block;
+        padding-left: 18px;
+        margin-bottom: 25px;
+    }
+    
+    
+} */
